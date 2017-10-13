@@ -17,7 +17,7 @@
 <div class="form-row">
         <div class="form-group col">
             <label for="province" class="form-control-label text-uppercase font-weight-bold">Province <span class="text-danger">*</span></label><br>
-        <select class="custom-select form-control form-control-lg" name="province" value="{{$user->province}}">
+        <select class="custom-select form-control form-control-lg" name="province">
             <option value="">Select your Province</option>
             <option value="Ontario">Ontario</option>
             <option value="Québec">Québec</option>
@@ -48,7 +48,7 @@
         </div>
         <div class="form-group">
           <label for="salary" class="form-control-label text-uppercase font-weight-bold">Salary <span class="text-danger">*</span></label>
-          <input name="salary" type="number" class="form-control form-control-lg" id="salary" value="{{$user->salary}}">
+          <input name="salary" type="text" class="form-control form-control-lg" id="salary" value="{{$user->salary}}">
         </div>
         <div class="d-flex flex-row-reverse mt-4">
         <button type="submit" class="py-3 px-5 btn btn-primary btn-lg">Update</button></div>

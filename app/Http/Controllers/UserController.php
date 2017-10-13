@@ -44,7 +44,7 @@ class UserController extends Controller
             'province' => 'required',
             'telephone' => ['required', 'regex:/^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/'],
             'postal' =>['required', 'regex:/([ABCEGHJ-NPRSTVXY]\d[A-Z])[\s\-]?(\d[A-Z]\d)/'],
-            'salary' => 'required'
+            'salary' => ['required', 'regex:/((?:[0-9]{1,3}[ \.,]?)*[\.,]?[0-9]+)/']
         );
 
 $validator = Validator::make($request->all(), $rules);

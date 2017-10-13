@@ -40,22 +40,22 @@
         <div class="form-row">
             <div class="form-group col-lg-6">
               <label for="telephone" class="col-form-label text-uppercase font-weight-bold">Telephone <span class="text-danger">*</span></label>
-              <input name="telephone" type="tel" class="form-control form-control-lg" id="telephone" placeholder="" value="{{Request::old('telephone')}}">
+              <input name="telephone" type="tel" class="form-control form-control-lg" id="telephone" placeholder="123-456-7890" value="{{Request::old('telephone')}}">
               @if ($errors->has('telephone'))
                   <p class="form-text text-danger">{{$errors->first('telephone')}}</p>
               @endif
               </div>
              <div class="form-group col-lg-6">
                  <label for="postal" class="col-form-label text-uppercase font-weight-bold">Postal Code <span class="text-danger">*</span></label>
-                 <input type="text" name="postal" class="form-control form-control-lg" id="postal" placeholder="X#X #X#" value="{{Request::old('postal')}}">
+                 <input type="text" name="postal" class="form-control form-control-lg" id="postal" placeholder="ex. M5V 2T6" value="{{Request::old('postal')}}">
                  @if ($errors->has('postal'))
                      <p class="form-text text-danger">{{$errors->first('postal')}}</p>
                  @endif
             </div>
         </div>
         <div class="form-group">
-          <label for="salary" class="form-control-label text-uppercase font-weight-bold">Salary <span class="text-danger">*</span></label>
-          <input name="salary" type="number" class="form-control form-control-lg" id="salary" placeholder="" value="{{Request::old('salary')}}">
+          <label for="salary" class="form-control-label text-uppercase font-weight-bold">Salary ($)<span class="text-danger">*</span></label>
+          <input name="salary" type="text" class="form-control form-control-lg" id="salary" placeholder="50,000.00" value="{{Request::old('salary')}}">
           @if ($errors->has('salary'))
               <p class="form-text text-danger">{{$errors->first('salary')}}</p>
           @endif
